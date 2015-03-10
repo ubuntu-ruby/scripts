@@ -2,9 +2,7 @@
 
 # TODO:
 # fonts, aliasing, hinting, etc.
-# zsh style, plugins
 # icons
-# user settings
 # hotkeys, langs, HUD, win/super key, synapse
 # opera config
 # rubymine plugins
@@ -31,7 +29,7 @@ sudo add-apt-repository ppa:tualatrix/ppa -y
 sudo apt-get update
 sudo apt-get install ubuntu-tweak unity-tweak-tool -y
 sudo apt-get install compizconfig-settings-manager compiz-plugins-extra -y
-sudo apt-get install dconf-tools
+sudo apt-get install dconf-tools -y
 
 sudo apt-get install gimp -y
 
@@ -45,7 +43,6 @@ sudo apt-get install jayatana -y
 sudo add-apt-repository ppa:webupd8team/java -y
 sudo apt-get update
 sudo apt-get install oracle-java8-installer -y
-sudo apt-get install oracle-java8-set-default -y
 
 wget -P /tmp http://download.virtualbox.org/virtualbox/4.3.24/virtualbox-4.3_4.3.24-98716~Ubuntu~raring_amd64.deb
 sudo dpkg -i /tmp/virtualbox*.deb
@@ -135,7 +132,7 @@ git config --global user.email engineer@localhost
 # fonts
 cp -R .fonts ~/ 
 sudo cp -R bdf-fonts/*.bdf /usr/share/font/X11/misc
-sudo apt-get install ttf-droid -y
+sudo apt-get install ttf-mscorefonts-installer -y
 
 sudo add-apt-repository ppa:no1wantdthisname/ppa -y
 sudo apt-get update

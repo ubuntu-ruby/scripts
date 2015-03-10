@@ -7,6 +7,6 @@
 -Djsse.enableSNIExtension=false
 -XX:+UseConcMarkSweepGC
 -XX:SoftRefLRUPolicyMSPerMB=50
--Dawt.useSystemAAFontSettings=true
+-Dawt.useSystemAAFontSettings=lcd
 -Dswing.aatext=true
 -Dsun.java2d.xrender=true
