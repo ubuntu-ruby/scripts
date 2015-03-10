@@ -1,0 +1,9 @@
+-Xms256m
+-Xmx1024m
+-XX:MaxPermSize=400m
+-ea
+-Dsun.io.useCanonCaches=false
+-Djava.net.preferIPv4Stack=true
+-Djsse.enableSNIExtension=false
+-XX:+UseConcMarkSweepGC
+-XX:SoftRefLRUPolicyMSPerMB=50

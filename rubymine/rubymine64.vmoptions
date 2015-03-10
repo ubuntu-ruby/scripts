@@ -1,0 +1,12 @@
+-Xms256m
+-Xmx2048m
+-XX:MaxPermSize=512m
+-ea
+-Dsun.io.useCanonCaches=false
+-Djava.net.preferIPv4Stack=true
+-Djsse.enableSNIExtension=false
+-XX:+UseConcMarkSweepGC
+-XX:SoftRefLRUPolicyMSPerMB=50
+-Dawt.useSystemAAFontSettings=true
+-Dswing.aatext=true
+-Dsun.java2d.xrender=true

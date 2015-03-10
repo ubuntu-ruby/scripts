@@ -1,12 +1,16 @@
 #!/bin/bash
 
-# configs
+# TODO:
 # fonts, aliasing, hinting, etc.
-# terminal style
 # zsh style, plugins
 # icons
 # user settings
-# 
+# hotkeys, langs, HUD, win/super key, synapse
+# opera config
+# rubymine plugins
+# rubymine config dir
+# rubymine test lcd_hrgb
+# rubymine fonts test
 
 sudo cp -Rf ./etc /etc
 
@@ -53,12 +57,20 @@ wget -P /tmp http://www.opera.com/download/get/?id=35889&amp;location=360&amp;no
 sudo dpkg -i /tmp/opera*.deb
 # opera config
 
+wget -P /tmp http://sunflower-fm.org/pub/sunflower-0.2.59-1.all.deb
+sudo dpkg -i /tmp/sunflower*.deb
+
 sudo ./dist/truecrypt-7.1a-setup-x64
 
-# fm
-# rubymine
-wget -P /tmp https://download.jetbrains.com/ruby/RubyMine-7.0.4.tar.gz
-# rubymine config, install, etc.
+wget https://download.jetbrains.com/ruby/RubyMine-7.0.4.tar.gz
+sudo mkdir -p /opt/rubymine
+sudo tar -zxvf RubyMine-7.0.4.tar.gz --strip-components 1 -C /opt/rubymine
+sudo chown -R root:root /opt/rubymine
+rm RubyMine-7.0.4.tar.gz -f
+sudo cp -f rubymine/rubymine64.vmoptions /opt/rubymine/bin/
+sudo /opt/rubymine/bin/rubymine.sh
+# rubymine plugins: node.js, markdown, code-glance
+# rubymine configs
 
 sudo apt-get install git git-core build-essential -y
 
@@ -106,10 +118,12 @@ rvm install 2.2
 rvm use 2.2 --default
 gem install rails
 
-# ui
+# desktop
 cp -R .themes ~/
 cp -R .icons ~/
 cp -R Wallpapers ~/Pictures
+cp -Rf .config ~/
+cp -Rf .gconf ~/
 
 # properties
 gsettings set org.gnome.gedit.preferences.encodings auto-detected "['UTF-8', 'WINDOWS-1251', 'CURRENT', 'ISO-8859-15', 'UTF-16']" 
