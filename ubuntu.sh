@@ -27,7 +27,7 @@ sudo apt-get install unace rar unrar p7zip-rar p7zip sharutils uudeview mpack lh
 
 sudo add-apt-repository ppa:tualatrix/ppa -y
 sudo apt-get update
-sudo apt-get install ubuntu-tweak unity-tweak-tool -y
+sudo apt-get install unity-tweak-tool -y
 sudo apt-get install compizconfig-settings-manager compiz-plugins-extra -y
 sudo apt-get install dconf-tools -y
 
@@ -64,7 +64,7 @@ sudo mkdir -p /opt/rubymine
 sudo tar -zxvf RubyMine-7.0.4.tar.gz --strip-components 1 -C /opt/rubymine
 sudo chown -R root:root /opt/rubymine
 rm RubyMine-7.0.4.tar.gz -f
-sudo cp -f rubymine/rubymine64.vmoptions /opt/rubymine/bin/
+# sudo cp -f rubymine/rubymine64.vmoptions /opt/rubymine/bin/
 sudo /opt/rubymine/bin/rubymine.sh
 # rubymine plugins: node.js, markdown, code-glance
 # rubymine configs
@@ -91,7 +91,7 @@ sudo apt-get install indicator-virtual-box -y
 sudo apt-get install indicator-privacy -y
 sudo apt-get install indicator-places -y
 
-sudo apt-get install zsh
+sudo apt-get install zsh -y
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 chsh -s `which zsh`
 
@@ -103,7 +103,9 @@ sudo apt-get purge openjdk* -y
 sudo apt-get purge deja-dup -y
 sudo apt-get purge rhythmbox -y
 
-# ruby
+# SKDs
+sudo apt-get install nodejs -y
+
 curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 curl -L get.rvm.io | bash -s stable
 

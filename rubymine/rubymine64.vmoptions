@@ -1,6 +1,6 @@
--Xms256m
--Xmx2048m
--XX:MaxPermSize=512m
+-Xms128m
+-Xmx1024m
+-XX:MaxPermSize=400m
 -ea
 -Dsun.io.useCanonCaches=false
 -Djava.net.preferIPv4Stack=true
