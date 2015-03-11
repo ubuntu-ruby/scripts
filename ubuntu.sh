@@ -33,9 +33,9 @@ sudo apt-get install dconf-tools -y
 
 sudo apt-get install gimp -y
 
-sudo add-apt-repository ppa:ubuntu-x-swat/x-updates -y
-sudo apt-get update
-sudo apt-get install nvidia-current -y
+# sudo add-apt-repository ppa:ubuntu-x-swat/x-updates -y
+# sudo apt-get update
+# sudo apt-get install nvidia-current -y
 
 sudo add-apt-repository ppa:danjaredg/jayatana -y
 sudo apt-get update
@@ -147,7 +147,7 @@ sudo apt-get install libfreetype6 -y
 sudo fc-cache -f -v
 
 # system properties
-sudo echo 'wm.swappiness=10' >> /etc/sysctl.conf
+sudo su -c "echo 'wm.swappiness=10' >> /etc/sysctl.conf"
 
 # cleanup
 sudo apt-get autoclean -y
