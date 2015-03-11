@@ -1,5 +1,6 @@
 # DO IT
 
+- install drivers
 - font settings: play-9, monospace 9, sans 10, play 9; grayscale, 1.00, slight;
 - font settings: play-9, monospace 9, sans 10, play 9; rgba, 1.00, slight;
 - keyboard settings
