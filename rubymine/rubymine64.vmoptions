@@ -1,5 +1,5 @@
--Xms128m
--Xmx1024m
+-Xms256m
+-Xmx2048m
 -XX:MaxPermSize=400m
 -ea
 -Dsun.io.useCanonCaches=false
@@ -10,3 +10,4 @@
 -Dawt.useSystemAAFontSettings=lcd
 -Dswing.aatext=true
 -Dsun.java2d.xrender=true
+

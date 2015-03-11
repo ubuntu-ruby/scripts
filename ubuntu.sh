@@ -1,14 +1,7 @@
 #!/bin/bash
 
 # TODO:
-# fonts, aliasing, hinting, etc.
 # icons
-# hotkeys, langs, HUD, win/super key, synapse
-# opera config
-# rubymine plugins
-# rubymine config dir
-# rubymine test lcd_hrgb
-# rubymine fonts test
 
 sudo cp -Rf ./etc /etc
 
@@ -56,6 +49,7 @@ sudo dpkg -i /tmp/opera*.deb
 
 wget -P /tmp http://sunflower-fm.org/pub/sunflower-0.2.59-1.all.deb
 sudo dpkg -i /tmp/sunflower*.deb
+sudo apt-get install python-vte -y
 
 sudo ./dist/truecrypt-7.1a-setup-x64
 
@@ -64,15 +58,13 @@ sudo mkdir -p /opt/rubymine
 sudo tar -zxvf RubyMine-7.0.4.tar.gz --strip-components 1 -C /opt/rubymine
 sudo chown -R root:root /opt/rubymine
 rm RubyMine-7.0.4.tar.gz -f
-# sudo cp -f rubymine/rubymine64.vmoptions /opt/rubymine/bin/
 sudo /opt/rubymine/bin/rubymine.sh
-# rubymine plugins: node.js, markdown, code-glance
-# rubymine configs
 
 sudo apt-get install git git-core build-essential -y
 
 sudo apt-get install python-appindicator python-pip -y
 
+sudo add-apt-repository ppa:noobslab/apps -y
 sudo add-apt-repository ppa:noobslab/indicators -y
 sudo add-apt-repository ppa:diesch/testing -y
 sudo add-apt-repository ppa:thebernmeister/ppa -y
@@ -89,19 +81,18 @@ sudo apt-get install classicmenu-indicator -y
 sudo apt-get install indicator-multiload -y
 sudo apt-get install indicator-virtual-box -y
 sudo apt-get install indicator-privacy -y
-sudo apt-get install indicator-places -y
+# sudo apt-get install indicator-places -y
 
 sudo apt-get install zsh -y
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 chsh -s `which zsh`
 
-sudo apt-get purge zeitgeist zeitgeist-core zeitgeist-datahub -y
-sudo apt-get purge gnome-orca -y
-sudo apt-get purge unity-webapps-common -y
-sudo apt-get purge telepathy-* -y
+sudo add-apt-repository ppa:ubuntu-on-rails/ppa -y
+sudo apt-get update
+sudo apt-get install gedit-gmate -y
+
+
 sudo apt-get purge openjdk* -y
-sudo apt-get purge deja-dup -y
-sudo apt-get purge rhythmbox -y
 
 # SKDs
 sudo apt-get install nodejs -y
@@ -112,6 +103,7 @@ curl -L get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 
 echo 'gem: --no-document' > ~/.gemrc
+echo 'source "$HOME/.rvm/scripts/rvm"' >> ~/.zshrc
 
 rvm install 2.2
 rvm use 2.2 --default
@@ -130,6 +122,13 @@ gsettings set org.gnome.libgnomekbd.indicator show-flags true
 
 git config --global user.name engineer
 git config --global user.email engineer@localhost
+
+sudo cp /opt/rubymine/bin/idea.properties /opt/rubymine/bin/idea.properties.default
+sudo cp -f rubymine/idea.properties /opt/rubymine/bin/
+sudo cp /opt/rubymine/bin/rubymine64.vmoptions /opt/rubymine/bin/rubymine64.vmoptions.default
+sudo cp -f rubymine/rubymine64.vmoptions /opt/rubymine/bin/
+
+cp -Rf rubymine/plugins ~/.rubymine/config/
 
 # fonts
 cp -R .fonts ~/ 
