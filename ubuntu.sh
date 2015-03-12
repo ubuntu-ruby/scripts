@@ -130,7 +130,7 @@ sudo cp -f rubymine/rubymine64.vmoptions /opt/rubymine/bin/
 cp -Rf rubymine/plugins ~/.rubymine/config/
 
 # fonts
-cp -R .fonts ~/ 
+cp -R .fonts ~/
 sudo cp -R bdf-fonts/*.bdf /usr/share/font/X11/misc
 sudo apt-get install ttf-mscorefonts-installer -y
 
