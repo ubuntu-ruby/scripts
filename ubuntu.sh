@@ -111,8 +111,7 @@ gem install rails
 
 # desktop
 cp -R .themes ~/
-cp -R .icons ~/
-cp -R Wallpapers ~/Pictures
+cp -R Wallpapers/* ~/Pictures
 cp -Rf .config ~/
 cp -Rf .gconf ~/
 
