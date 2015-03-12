@@ -43,7 +43,7 @@ sudo dpkg -i /tmp/virtualbox*.deb
 wget -P /tmp https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb
 sudo dpkg -i /tmp/vagrant*.deb
 
-wget -P /tmp http://www.opera.com/download/get/?id=35889&amp;location=360&amp;nothanks=yes&amp;sub=marine
+wget -O /tmp/opera-12.16.deb http://www.opera.com/download/get/?id=35889&amp;location=360&amp;nothanks=yes&amp;sub=marine
 sudo dpkg -i /tmp/opera*.deb
 # opera config
 
